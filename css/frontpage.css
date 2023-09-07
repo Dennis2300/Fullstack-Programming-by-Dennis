@@ -1,0 +1,120 @@
+:root {
+    --background:url("https://c0.wallpaperflare.com/path/600/388/1006/group-of-people-enjoying-concerts-99c542b19066035edfa1f2786d871496.jpg")
+}
+
+#front-page {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: var(--background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#left-side-cover {
+    background-color: aliceblue;
+    height: 100%;
+    width: 30%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#front-page-btn {
+    position: fixed;
+    bottom: 10%;
+    left: 6%;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+}
+
+.music-genre-list{
+    position: fixed;
+    bottom: 20%;
+    list-style-type: none;
+    font-size: 3.5em;
+    font-family: var(--textFont2);
+}
+
+.front-page-header {
+    position: fixed;
+    transform: translate(7%, 100%);
+    font-size: 5.5em;
+    font-family: var(--front-page-header);
+    text-align: center;
+}
+
+.fadeIn {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.btn-fadeIn {
+    animation: btn-fadeIn 3s;
+}
+
+@keyframes btn-fadeIn{
+    0% {
+        opacity: 0;
+        bottom: -10px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slideIn {
+    animation: slideIn 1s;
+}
+
+.slideIn2 {
+    animation: slideIn2 2s;
+}
+.slideIn3 {
+    animation: slideIn2 2.5s;
+}
+.slideIn4 {
+    animation: slideIn2 3s;
+}
+.slideIn5 {
+    animation: slideIn2 3.5s;
+}
+.slideIn6 {
+    animation: slideIn2 4s;
+}
+.slideIn7 {
+    animation: slideIn2 4.5s;
+}
+
+
+@keyframes slideIn {
+    0% {
+        position: absolute;
+        left: -200px;
+    }
+    100% {
+        position: absolute;
+        left: 0px;
+    }
+}
+@keyframes slideIn2 {
+    0% {
+        position: relative;
+        left: -200px;
+    }
+    100% {
+        position: relative;
+        left: 0px;
+    }
+}

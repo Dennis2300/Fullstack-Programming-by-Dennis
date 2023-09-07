@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis's fullstack opgave frontend</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/artist-list.css">
+    <link rel="stylesheet" href="/css/frontpage.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Carter+One&family=Caveat:wght@500&family=Lilita+One&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <main id="front-page" class="fadeIn ">
+        <h1 class="front-page-header slideIn" >Where Words Fail,<br> Music Speaks!</h1>
+        <div id="left-side-cover">
+               <ul class="music-genre-list">
+                   <li class="slideIn2">Electronic Dance Music</li>
+                   <li class="slideIn3">Alternative Rock</li>
+                   <li class="slideIn4">Hip Hop/Rap</li>
+                   <li class="slideIn5">R&B/Soul</li>
+                   <li class="slideIn6">Rock</li>
+                   <li class="slideIn7">Pop</li>
+               </ul>
+            <button id="front-page-btn" class="btn-styling btn-fadeIn">See List of Artists</button>
+        </div>
+    </main>
+
+    <!--Add id if more than 1 grid area-->
+    <main id="artist-list-page" class="fadeIn hidden">
+        <header>
+            <h1>Music Artists</h1>
+            <button id="artist-list-btn" class="btn-styling">Home</button>
+        </header>
+        <h2>A list of my favourite music artists</h2>
+        <section id="display-artists" class="grid-container"></section>
+
+        <!------------Create New Artist Form------------>
+        <form id="create-artist-form" class="form">
+            <h2>Add New Artist</h2>
+            <input type="text" name="name" placeholder="Artist Name" > <br>
+            <input type="text" name="shortDesc" placeholder="Short Description" maxlength="200"> <br>
+            <input type="date" name="birthday" placeholder="The Artists D.O.B" > <br>
+            <input type="number" name="activeSince" placeholder="Active Since?" min="1950"> <br>
+            <input type="text" name="genre" placeholder="Music Genre"> <br>
+            <input type="text" name="label" placeholder="Music Label"> <br>
+            <input type="url" name="website" placeholder="Link to Artist website"> <br>
+            <input type="url" name="image" placeholder="Image"> <br>
+            <button class="btn-styling3">Add New Artist</button>
+        </form>
+
+        <!------------Update Artist Form------------>
+        <form id="update-artist-form" class="form">
+            <h2>Update Artist</h2>
+            <input type="text" name="name" placeholder="Artist Name" > <br>
+            <input type="text" name="shortDesc" placeholder="Short Description" maxlength="400"> <br>
+            <input type="date" name="birthday" placeholder="The Artists D.O.B" > <br>
+            <input type="number" name="activeSince" placeholder="Active Since?" min="1950"> <br>
+            <input type="text" name="genre" placeholder="Music Genre"> <br>
+            <input type="text" name="label" placeholder="Music Label"> <br>
+            <input type="url" name="website" placeholder="Link to Artist website"> <br>
+            <input type="url" name="image" placeholder="Image"> <br>
+            <button class="btn-styling3">Update Current Artist</button>
+        </form>
+
+    </main>
+        
+    <script src="/javascripts/app.js" type="module"></script>
+</body>
+</html>
