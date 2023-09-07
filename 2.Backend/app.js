@@ -12,7 +12,7 @@ app.get("/artists", async (request, response) => {
     response.statusCode = 200;
     response.setHeader("Content-Type", "application/json")
 
-    const artistList = await fs.readFile("data/artists.json")
+    const artistList = await fs.readFile("2.Backend/data/artists.json")
     response.end(artistList)
 })
 
@@ -25,7 +25,7 @@ app.get("/artists/:id", (request, response) => {
 
 app.post("/artists", async (request, response) => {
 
-    const json = await fs.readFile("data/artists.json");
+    const json = await fs.readFile("2.Backend/data/artists.json");
     const artistList = JSON.parse(json)
 
     const newArtist = {
@@ -43,7 +43,7 @@ app.post("/artists", async (request, response) => {
     artistList.push(newArtist)
 
     const artistJSON = JSON.stringify(artistList)
-    await fs.writeFile("data/artists.json", artistJSON)
+    await fs.writeFile("2.Backend/data/artists.json", artistJSON)
 
     response.statusCode = 200;
     response.setHeader("Content-Type", "application/json")
@@ -53,7 +53,7 @@ app.post("/artists", async (request, response) => {
 
 app.put("/artists/:id", async (request, response) => {
 
-    const json = await fs.readFile("data/artists.json");
+    const json = await fs.readFile("2.Backend/data/artists.json");
     const artistList = JSON.parse(json)
 
     const id = Number(request.params.id);
@@ -71,7 +71,7 @@ app.put("/artists/:id", async (request, response) => {
     updateArtist.image = body.image;
 
     const artistJSON = JSON.stringify(artistList)
-    await fs.writeFile("data/artists.json", artistJSON)
+    await fs.writeFile("2.Backend/data/artists.json", artistJSON)
 
     response.statusCode = 200;
     response.setHeader("Content-Type", "application/json")
@@ -81,7 +81,7 @@ app.put("/artists/:id", async (request, response) => {
 
 app.delete("/artists/:id", async (request, response) => {
 
-    const json = await fs.readFile("data/artists.json");
+    const json = await fs.readFile("2.Backend/data/artists.json");
     const artistList = JSON.parse(json)
 
 
@@ -91,7 +91,7 @@ app.delete("/artists/:id", async (request, response) => {
     artistList.splice(deleteArtist, 1)
 
     const artistJSON = JSON.stringify(artistList)
-    await fs.writeFile("data/artists.json", artistJSON)
+    await fs.writeFile("2.Backend/data/artists.json", artistJSON)
 
     response.statusCode = 200;
     response.setHeader("Content-Type", "application/json")
