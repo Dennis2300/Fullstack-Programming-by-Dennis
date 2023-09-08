@@ -6,6 +6,7 @@ This software is provided on best-effort basis. And it is a school assignment
 ### KNOWN BUGS & ISSUES:
 1. `event.preventDefault` does not work currently, so the app will go to the front page every time users is creating, updating or deleting.
 2. The App does not fit various screen sizes so there might be a lot of things that look out of place.
+3. There is currently no search and filter functionality which will be added later
 
 ## Installation
 1. Clone the repository: <br>
