@@ -2,7 +2,7 @@
 The Music Artist CRUD (Create, Read, Update, Delete) App is a web application designed to manage and maintain information about music artists.
 
 ## DISCLAIMER!
-This software is provided on best-effort basis.
+This software is provided on best-effort basis. And it is a school assignment
 ### KNOWN BUGS & ISSUES:
 1. `event.preventDefault` does not work currently, so the app will go to the front page every time users is creating, updating or deleting.
 2. The App does not fit various screen sizes so there might be a lot of things that look out of place.
