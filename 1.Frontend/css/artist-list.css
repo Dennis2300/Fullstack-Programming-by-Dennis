@@ -36,6 +36,14 @@ main > h2 {
     letter-spacing: 2px;
 }
 
+#sortByName {
+    margin-left: 5%;
+    margin-top: -2%;
+    margin-bottom: 0%;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
 .form {
     text-align: center;
     font-size: 3em;

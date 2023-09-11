@@ -20,6 +20,9 @@ function initApp() {
     //----------Event listener for Create, Update & Delete----------//
     document.querySelector("#create-artist-form").addEventListener("submit", createNewArtist)
     document.querySelector("#update-artist-form").addEventListener("submit", updateArtist)
+
+    //----------Sort list by name----------//
+    document.querySelector("#sortByName").addEventListener("click", sortByName)
 }
 
 //----------Show Artists Functions----------//
@@ -43,4 +46,12 @@ function selectArtist(artist) {
     form.image.value = artist.image;
 
     form.scrollIntoView({behavior:"smooth"})
+}
+
+async function sortByName() {
+    const artistList = await getAllArtists();
+    const sortedArtistsList = artistList.sort((artists1, artist2) => {
+        return artists1.name.localeCompare(artist2.name)
+    })
+    showArtist(sortedArtistsList)
 }
